@@ -7,10 +7,18 @@
   <mat-sidenav-content>
     <mat-toolbar>
       <mat-toolbar-row>
-        <button mat-button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        ｓａｎｄｂｏｘ　シー河
+        <button mat-button [matMenuTriggerFor]="operators">...</button>
+
+        <mat-menu #operators="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="combination">Combination</button>
+        </mat-menu>
+
+        <mat-menu #combination="matMenu">
+          <button mat-menu-item>combineAll</button>
+          <button mat-menu-item>combineLatest</button>
+          <button mat-menu-item>concat</button>
+        </mat-menu>
+        ｓａｎｄｂｏｘ　ー河
       </mat-toolbar-row>
     </mat-toolbar>
   </mat-sidenav-content>
