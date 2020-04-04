@@ -7,6 +7,8 @@ import {MaterialModule} from '../external/modules/material.module';
 import {PostsService} from '../services/posts.service';
 
 import {AppComponent} from './app.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import {AppComponent} from './app.component';
     CombineAllComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
